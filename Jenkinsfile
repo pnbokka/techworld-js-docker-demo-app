@@ -6,15 +6,15 @@ pipeline{
       
       stage("build") {
         
-          when{
-            expression  {
-                BRANCH_NAME == 'main' && CODE_CHANGES == true
-            }
+        //  when{
+        //    expression  {
+        //        BRANCH_NAME == 'main' && CODE_CHANGES == true
+        //    }
             steps{
                   echo 'Building the application.....'
             }
           
-          }
+          //}
       }
         
         
