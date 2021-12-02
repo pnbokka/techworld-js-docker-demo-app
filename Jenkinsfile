@@ -4,21 +4,21 @@ pipeline{
     
   stages{
       
-      stage ("build"){
+      stage("build") {
         
-        when{
+          when{
             expression  {
-                BRANCH_NAME=='main' && CODE_CHANGES == 'true'
+                BRANCH_NAME == 'main' && CODE_CHANGES == true
             }
             steps{
                   echo 'Building the application.....'
             }
           
-        }
+          }
       }
         
         
-       stage ("test"){
+       stage("test") {
         
             steps{
               echo 'Testing the application......'
@@ -26,7 +26,7 @@ pipeline{
        }
          
          
-        stage ("deploy"){
+        stage("deploy") {
         
             steps{
                   echo 'Deploying the application.....'        
